@@ -3,31 +3,70 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
-    private List<Player> players;
-    private static GameManager instance;
     public GameObject playerPrefab;
+    public string preloadingSceneName;
+    public string firstSceneName;
+    private List<Player> players;
+    private static GameManager _instance;
+    private GameState gameState;
+    private TimerManager timerManager;
 
-    public enum GameState
+    private enum GameState
     {
+        Preloading,
         NotStarted,
         Running,
         Paused,
         Stopped
     }
 
+    //Initialize stuff here, for the pre-loading scene
     public void Awake()
     {
+        DebugLogger.Log("GameManager awake begins", Enum.LoggerMessageType.Important);
+        gameState = GameState.Preloading;
+
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+
         players = new List<Player>();
+
+        timerManager = GetComponent<TimerManager>();
+        if(timerManager != null)
+        {
+            timerManager.timerLocked = true;
+            DebugLogger.Log("TimerManager initialized for GameManager", Enum.LoggerMessageType.Important);
+        }
+
+        DontDestroyOnLoad(gameObject);
+        DebugLogger.Log("GameManager awake done", Enum.LoggerMessageType.Important);
     }
 
     // Use this for initialization
     void Start()
     {
-        //DebugLogger.Log("Test", Enum.LoggerMessageType.Important);
+        var currentSceneName = SceneManager.GetActiveScene().name;
+
+        if(currentSceneName == preloadingSceneName)
+        {
+            StartPreload();
+        }
+    }
+
+    //Start method specific to the preloading scene
+    private void StartPreload()
+    {
+        //Preload stuff then go to the menu/main scene
+        DebugLogger.Log("GameManager start preloading ", Enum.LoggerMessageType.Important);
+
+        gameState = GameState.NotStarted;
+        SceneManager.LoadScene(1);
     }
 
     // Update is called once per frame
@@ -39,11 +78,17 @@ public class GameManager : MonoBehaviour
     public void CreatePlayers()
     {
         //Instantiate the player prefab and add players to the list
+        if(playerPrefab != null)
+        {
+
+        }
+
     }
 
     public void PauseGame()
     {
         Time.timeScale = 0;
+        gameState = GameState.Paused;
         foreach (var p in players)
         {
             p.canPlay = false;
@@ -63,12 +108,13 @@ public class GameManager : MonoBehaviour
         //Some code to hide the GUI thingies that were displayed
     }
 
+    //Get the current game manager
+    public GameManager GetInstance()
+    {
+        return _instance;
+    }
 
     /*============================= Utility functions ============================= */
-
-
-
-
 
     //Pick a random player in the list
     public Player PickRandomPlayer()

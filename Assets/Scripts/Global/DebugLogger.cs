@@ -13,7 +13,7 @@ public static class DebugLogger  {
                 break;
 
             case Enum.LoggerMessageType.Important:
-                Debug.Log("<color=red>"+message+"</color>");
+                Debug.Log("<color=blue>"+message+"</color>");
                 break;
 
             case Enum.LoggerMessageType.Error:

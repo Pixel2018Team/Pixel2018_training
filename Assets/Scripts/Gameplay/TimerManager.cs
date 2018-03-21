@@ -106,7 +106,7 @@ public class TimerManager : MonoBehaviour
                                 timerTextObject.text = string.Format("{0}:{1}", remainingMins, remainingSecs);
                         }
 
-                        Debug.Log("rem tine " + remainingMins + ":" + remainingSecs);
+                        //Debug.Log("rem time " + remainingMins + ":" + remainingSecs);
                     }
                 }
             }
