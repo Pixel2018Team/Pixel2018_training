@@ -5,15 +5,23 @@ using UnityEngine;
 public class ShooterController : MonoBehaviour
 {
     private Queue<GameObject> bullets = new Queue<GameObject>();
+    private float _time = 0.0f;
 
     public InputMapping.PlayerTag playerTag;
     public int bulletCount = 10;
     public float bulletSpeed = 300.0f;
+    public float cooldown = 0.25f;
 
     void Update()
     {
-        if (Input.GetButtonDown(InputMapping.GetInputName(playerTag, InputMapping.Input.RB)))
+        Debug.Log(Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.RT)));
+        if(_time > 0.0f)
         {
+            _time -= Time.deltaTime;
+        }
+        else if(Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.RT)) > 0.5)
+        {
+            _time = cooldown;
             Shoot();
         }
     }
