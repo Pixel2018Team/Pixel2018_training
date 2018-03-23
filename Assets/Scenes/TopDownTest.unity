@@ -243,6 +243,7 @@ MonoBehaviour:
   playerTag: 0
   bulletCount: 10
   bulletSpeed: 300
+  cooldown: 0.25
 --- !u!1 &775131431
 GameObject:
   m_ObjectHideFlags: 0
