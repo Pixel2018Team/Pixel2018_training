@@ -33,6 +33,7 @@ public class TopDownController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        _rigidBody.velocity = _moveVelocity;
+        //TODO: can remove the gravity by removing the up vector
+        _rigidBody.velocity = _moveVelocity + _rigidBody.velocity.y * Vector3.up;
     }
 }
