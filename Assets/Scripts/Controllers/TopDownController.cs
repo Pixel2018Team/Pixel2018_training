@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
+using Global;
 
 public class TopDownController : MonoBehaviour
 {
     public float speed = 6.0F;
+    public InputMapping.PlayerTag playerTag;
 
     private Rigidbody _rigidBody;
     private Vector3 _moveInput;
@@ -17,10 +19,12 @@ public class TopDownController : MonoBehaviour
     {
         Debug.DrawLine(transform.position, transform.position + transform.rotation * Vector3.forward * 3, Color.red);
 
-        _moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, Input.GetAxisRaw("Vertical"));
+        _moveInput = new Vector3(Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Horizontal)), 0f,
+            Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.Vertical)));
         _moveVelocity = _moveInput * speed;
 
-        Vector3 newDirection = Vector3.right * Input.GetAxisRaw("RHorizontal") + Vector3.forward * Input.GetAxisRaw("RVertical");
+        Vector3 newDirection = Vector3.right * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.RHorizontal))
+            + Vector3.forward * Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.RVertical));
         if(newDirection.sqrMagnitude > 0.0f)
         {
             transform.rotation = Quaternion.LookRotation(newDirection, Vector3.up);
