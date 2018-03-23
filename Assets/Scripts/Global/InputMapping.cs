@@ -7,7 +7,12 @@
             Horizontal,
             Vertical,
             RHorizontal,
-            RVertical
+            RVertical,
+            LB,
+            RB,
+            LT,
+            RT,
+            X
         }
 
         public enum PlayerTag
