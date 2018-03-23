@@ -14,7 +14,6 @@ public class ShooterController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Input.GetAxisRaw(InputMapping.GetInputName(playerTag, InputMapping.Input.RT)));
         if(_time > 0.0f)
         {
             _time -= Time.deltaTime;
