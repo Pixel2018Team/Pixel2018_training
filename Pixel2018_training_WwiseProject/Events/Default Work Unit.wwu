@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9C9AA3C9-4637-40D8-8F43-598456DC7C6C}" SchemaVersion="85">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{9C9AA3C9-4637-40D8-8F43-598456DC7C6C}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="test" ID="{89E2ABBA-BFCD-46C9-9FFC-82E6635FF504}">
+					<ChildrenList>
+						<Action Name="" ID="{571451AA-1C69-4B21-80E1-ECB6C8EE9B9E}" ShortID="592487461">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cartoon Hop-SoundBible_com-553158131" ID="{E012FC5F-429B-404A-A8AF-FE96015B6797}" WorkUnitID="{F1A734AE-15CB-4E63-9CDD-ED68162C9B0B}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

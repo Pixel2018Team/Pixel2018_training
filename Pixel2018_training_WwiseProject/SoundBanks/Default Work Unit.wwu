@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3A6E5F89-86CC-47BD-A816-37EC7E82C563}" SchemaVersion="85">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{3A6E5F89-86CC-47BD-A816-37EC7E82C563}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Pixel2018" ID="{C6113CD0-15FA-49B6-8F31-3F9181937426}">
+					<ObjectInclusionList>
+						<ObjectRef Name="test" ID="{89E2ABBA-BFCD-46C9-9FFC-82E6635FF504}" WorkUnitID="{9C9AA3C9-4637-40D8-8F43-598456DC7C6C}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18ac27ea56461994b9994d4cfe674eaf, type: 3}
+  m_Name: AkWwiseProjectData
+  m_EditorClassIdentifier: 
+  AcousticTextureWwu:
+  - Guid: '{A6FDAFAD-19DC-48D6-A5E9-2E2DD7513B93}'
+    m_lastTimePart2: -1999267930
+    m_lastTimePsrt1: -1465644065
+    ParentPhysicalPath: 
+    PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    List: []
+  autoPopulateEnabled: 1
+  AuxBusWwu:
+  - Guid: '{62DF6E7A-0E65-4C93-8B7B-F189CAEB1BC2}'
+    m_lastTimePart2: -1999267930
+    m_lastTimePsrt1: -1466105388
+    ParentPhysicalPath: 
+    PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    List: []
+  BankWwu:
+  - Guid: '{3A6E5F89-86CC-47BD-A816-37EC7E82C563}'
+    m_lastTimePart2: -1999267930
+    m_lastTimePsrt1: -313109486
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\Default Work Unit.wwu
+    List:
+    - Guid: d03c11c6fa15b6498f313f9181937426
+      ID: 1881530322
+      Name: Pixel2018
+      Path: Default Work Unit\Pixel2018
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Pixel2018
+        ObjectType: 7
+  basePath: Audio\GeneratedSoundBanks
+  callbackManagerBufferSize: 4
+  CurrentPluginConfig: 
+  defaultPoolSize: 4096
+  EventWwu:
+  - Guid: '{9C9AA3C9-4637-40D8-8F43-598456DC7C6C}'
+    m_lastTimePart2: -1999267930
+    m_lastTimePsrt1: -313169380
+    ParentPhysicalPath: 
+    PhysicalPath: Events\Default Work Unit.wwu
+    List:
+    - Guid: baabe289cdbfc9469ffc82e6635ff504
+      ID: -1137964055
+      Name: test
+      Path: Default Work Unit\test
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: test
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  ExpandedItems:
+  - /Pixel2018_training_WwiseProject
+  language: English(US)
+  lowerPoolSize: 2048
+  m_lastPopulateTimePart2: 0
+  m_lastPopulateTimePsrt1: 0
+  memoryCutoffThreshold: 0.95
+  preparePoolSize: 0
+  RtpcWwu:
+  - Guid: '{1A093614-3CC1-467A-84FC-8D5039A8E804}'
+    m_lastTimePart2: -1999267930
+    m_lastTimePsrt1: -1466195633
+    ParentPhysicalPath: 
+    PhysicalPath: Game Parameters\Default Work Unit.wwu
+    List: []
+  StateWwu:
+  - Guid: '{D836F86A-4F02-4EF2-BE02-D1A5FE8A90AC}'
+    m_lastTimePart2: -1999267930
+    m_lastTimePsrt1: -1465694296
+    ParentPhysicalPath: 
+    PhysicalPath: States\Default Work Unit.wwu
+    List: []
+  streamingPoolSize: 1024
+  SwitchWwu:
+  - Guid: '{5E6A9E93-4A17-40F3-BDDB-EB0BCF5A9A4D}'
+    m_lastTimePart2: -1999267930
+    m_lastTimePsrt1: -1465924908
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Default Work Unit.wwu
+    List: []
+  TriggerWwu:
+  - Guid: '{1B407091-F10B-4B8E-B265-B05577112CA3}'
+    m_lastTimePart2: -1999267930
+    m_lastTimePsrt1: -1465975036
+    ParentPhysicalPath: 
+    PhysicalPath: Triggers\Default Work Unit.wwu
+    List: []

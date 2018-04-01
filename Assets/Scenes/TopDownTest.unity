@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 584579927}
   - component: {fileID: 584579926}
   - component: {fileID: 584579932}
+  - component: {fileID: 584579933}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -244,6 +245,17 @@ MonoBehaviour:
   bulletCount: 10
   bulletSpeed: 300
   cooldown: 0.25
+--- !u!114 &584579933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 584579925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed25664e6aa7cc9478061972b97e230a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &775131431
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,8 +352,9 @@ GameObject:
   - component: {fileID: 787712084}
   - component: {fileID: 787712083}
   - component: {fileID: 787712082}
-  - component: {fileID: 787712081}
   - component: {fileID: 787712085}
+  - component: {fileID: 787712086}
+  - component: {fileID: 787712081}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -349,13 +362,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &787712081
-AudioListener:
+--- !u!114 &787712081
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 787712080}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb22e101782f6b43924045ed7679f8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  listenerId: 0
 --- !u!124 &787712082
 Behaviour:
   m_ObjectHideFlags: 0
@@ -424,6 +443,69 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 584579925}
+--- !u!114 &787712086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 787712080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30a808397f7f2e64d8a21802a4744e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!1001 &914368990
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4412531101957140, guid: b0d8ffa3c901e404e85f6f3c28b0a5b3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412531101957140, guid: b0d8ffa3c901e404e85f6f3c28b0a5b3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412531101957140, guid: b0d8ffa3c901e404e85f6f3c28b0a5b3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412531101957140, guid: b0d8ffa3c901e404e85f6f3c28b0a5b3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412531101957140, guid: b0d8ffa3c901e404e85f6f3c28b0a5b3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412531101957140, guid: b0d8ffa3c901e404e85f6f3c28b0a5b3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412531101957140, guid: b0d8ffa3c901e404e85f6f3c28b0a5b3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4412531101957140, guid: b0d8ffa3c901e404e85f6f3c28b0a5b3, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: b0d8ffa3c901e404e85f6f3c28b0a5b3, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &938320594
 GameObject:
   m_ObjectHideFlags: 0
